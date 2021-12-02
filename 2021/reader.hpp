@@ -13,3 +13,12 @@ vector<int> readIntListFromStdout(const int fileSize) {
 
     return answer;    
 }
+
+vector<pair<string,int>> readStringIntPairFromStdout(const int fileSize) {
+    vector<pair<string,int>> answer(fileSize);
+    for(int i = 0; i < fileSize; i++) {
+        cin >> answer[i].first >> answer[i].second;
+    }
+
+    return answer;
+}
