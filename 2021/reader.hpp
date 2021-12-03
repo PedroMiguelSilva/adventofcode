@@ -22,3 +22,11 @@ vector<pair<string,int>> readStringIntPairFromStdout(const int fileSize) {
 
     return answer;
 }
+
+vector<string> readStringFromStdout(const int fileSize) {
+    vector<string> answer(fileSize);
+    for(int i = 0; i < fileSize; i++) {
+        cin >> answer[i];
+    }
+    return answer;
+}
