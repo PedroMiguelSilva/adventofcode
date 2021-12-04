@@ -30,3 +30,15 @@ vector<string> readStringFromStdout(const int fileSize) {
     }
     return answer;
 }
+
+vector<int> readCommaSeparatedIntStdout(const int drawn_size) {
+    vector<int> answer(drawn_size);
+    int val;
+    char trash;
+    for(int i = 0; i < drawn_size-1; i++) {
+        cin >> answer[i];
+        cin >> trash;
+    }
+    cin >> answer[answer.size()-1];
+    return answer;
+}
