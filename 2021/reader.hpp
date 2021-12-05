@@ -42,3 +42,26 @@ vector<int> readCommaSeparatedIntStdout(const int drawn_size) {
     cin >> answer[answer.size()-1];
     return answer;
 }
+
+struct Point {
+    int x;
+    int y;
+};
+
+vector<pair<Point, Point>> readLines() {
+    int x, y;
+    char tmp;
+    vector<pair<Point,Point>> answer;
+    while(!cin.eof()) {
+        cin >> x >> tmp >> y;
+        Point p1 = {x, y};
+        cin >> tmp >> tmp >> x >> tmp >> y;
+        Point p2 = {x, y};
+        if(p1.x < p2.x)
+            answer.push_back({p1, p2});
+        else
+            answer.push_back({p2, p1});
+    }
+
+    return answer;
+}
